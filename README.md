@@ -27,13 +27,25 @@ When you receive the mail above, send an email to `cms.people@cern.ch` as below
 >
 >	I'm now registered in CMS as 'Non-Doctoral Student' from my institute (ADANA-CUKUROVA).
 >
->	I need my username and password to login CMS. Could you send my "Username" and "Temporary Password" please.
+>	Could you provide my "Username" and "Initial Password", please.
 >
 >	Thank You.
 >
 >Surname, Name
->HRpersonId: 
+>HRpersonId:
+
+**For Step-1:**
+They will ask you to upload a copy of your ID (english) or passport to the system.
+**For Step-2**
+Also they'll ask you to fill another form that your team leader (Isa Dumanoglu for CU) will approve your account.
+
+
+
+
+
 
 
 
 For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGetAccount
+
+How to start data analysis: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
