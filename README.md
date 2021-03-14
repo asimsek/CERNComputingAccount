@@ -8,7 +8,7 @@
 - **First Name:** your name
 - **Institute:** Cukurova University
 - **Institute Representative:** (should be İsa Dumanoglu but i'm not sure)
-- **Activity:** (Should be **User**)
+- **Activity:** (Should be **User**, not sure)
 
 
 2. Click on `Ask CMS secretariat` button.
