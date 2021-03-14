@@ -33,10 +33,10 @@ When you receive the mail above, send an email to `cms.people@cern.ch` and `serv
 > 
 > HRpersonId:
 
-**For Step-1:**
+***For Step-1:***
 They will ask you to upload a copy of your ID (english) or passport to the system.
 
-**For Step-2:**
+***For Step-2:***
 Also they'll ask you to fill another form that your team leader (Isa Dumanoglu for CU) will approve your account.
 
 
@@ -51,7 +51,7 @@ After these steps, they should send you your username. Probably they'll **not** 
 
 For the initial password, you should send another email as:
 
-**Mail Subject: CMS Account Activation & Initial Password**
+***Mail Subject: CMS Account Activation & Initial Password***
 
 > Dear CERN People,
 >
