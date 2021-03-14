@@ -43,8 +43,11 @@ Also they'll ask you to fill another form that your team leader (Isa Dumanoglu f
 After these steps, they should send you your username. Probably they'll **not** send your initial password. You'll get an email as:
 
 > Welcome to CERN. Your Primary Account was automatically created.
+> 
 > Name: XXX YYY
+> 
 > Login: xxxxx
+> 
 > Email: your initial email address (hotmail, gmail etc.)
 
 ------------
