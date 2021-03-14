@@ -73,12 +73,11 @@ For the initial password, you should send another email to `service-desk@cern.ch
 They'll activate your account and send you an email including your initial password. Please follow the required actions section in your mail and change your account and EDH passwords in 3 days.
 
 
+ps. these steps can be changed partly but more or less the process is the same.
+
 
 
 For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGetAccount
-
-
-
 
 # How to start data analysis
 
