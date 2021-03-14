@@ -122,6 +122,7 @@ go back to **Session** tab on left side (first category), and save the session a
 This will open a terminal window and use your new cern account password. (you'll not see any character while you typing your password. Hold the backspace for a while if you type your password wrong). It's same with you email. (Btw, to see your e-mails: https://mmm.cern.ch/owa/). Now you're able to use your lxplus account. (list your folders with **ls -lhtr** when you login and use private folder for your analysis. **cd private**)
 
 > ps. open xming and you should see the icon on right bottom:
+
 ![Xming](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/xming_exit.png "Xming")
 
 > ps. lxplus6 is an old version and lxplus.cern.ch will direct you to latest version. (picture is old)
