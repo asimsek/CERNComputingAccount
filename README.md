@@ -30,6 +30,7 @@ When you receive the mail above, send an email to `cms.people@cern.ch` as below
 >	Thank You.
 >
 > Surname, Name
+> 
 > HRpersonId:
 
 **For Step-1:**
