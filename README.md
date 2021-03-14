@@ -19,7 +19,7 @@
     You are now registered in CMS as 'Non-Doctoral Student' from your institute (ADANA-CUKUROVA) .
 
 You will use the **HRPersonID** number in the next mail.
-When you receive the mail above, send an email to `cms.people@cern.ch` and `service-desk@cern.ch` as below.
+When you receive the mail above, send an email to `cms.people@cern.ch` as below.
 
 
 ***Mail Subject : CERN Account***
@@ -47,9 +47,12 @@ After these steps, they should send you your username. Probably they'll **not** 
 > Login: xxxxx
 > Email: your initial email address (hotmail, gmail etc.)
 
+------------
 
 
-For the initial password, you should send another email as:
+
+#### If they won't send you an initial password:
+For the initial password, you should send another email to `service-desk@cern.ch` as:
 
 ***Mail Subject: CMS Account Activation & Initial Password***
 
@@ -67,7 +70,7 @@ For the initial password, you should send another email as:
 
 
 
-
+They'll activate your account and send you an email including your initial password. Please follow the required actions section in your mail and change your account and EDH passwords in 3 days.
 
 
 
