@@ -84,7 +84,9 @@ For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGet
 
 
 ------------
+
 ------------
+
 ------------
 
 
@@ -118,6 +120,7 @@ This will open a terminal window and use your new cern account password. (you'll
 > ps. lxplus6 is an old version and lxplus.cern.ch will direct you to latest version. (picture is old)
 
 ![Putty Settings](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/putty.png "Putty Settings")
+
 ------------
 
 
@@ -146,14 +149,17 @@ This will open a terminal window and use your new cern account password. (you'll
 - **vi filename.xxx** -- vi is a text editor for your scripts. when you open the editor you can activate insert mode with pressing **i** on your keyboard and you can press **esc** to deactivate. You can see the current mode on left-bottom side. To save the file you can press **esc** first, they type **:w** and hit to **enter**. To quit from vi editor press **esc** first, type **:q** and hit **enter**. If you want to quit without saving your changes, press **esc** first, type **:q!** and hit **enter**. If you would like to save & exit, press **esc** first, type **:wq** hit **enter**.
 
 
-
-
-
-
-
-
-
 For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
 
 
+
+------------
+
+------------
+
+------------
+
+
+
+For the data analysis, follow this twiki page:
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
