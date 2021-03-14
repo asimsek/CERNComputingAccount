@@ -24,13 +24,13 @@ When you receive the mail above, send an email to `cms.people@cern.ch` as below
 
 
 >Dear Sir / Madame,
-
+>
 >	I'm now registered in CMS as 'Non-Doctoral Student' from my institute (ADANA-CUKUROVA).
-
+>
 >	I need my username and password to login CMS. Could you send my "Username" and "Temporary Password" please.
-
+>
 >	Thank You.
-
+>
 >Surname, Name
 >HRpersonId: 
 
