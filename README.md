@@ -103,10 +103,14 @@ For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGet
 
 ## Putty Settings
 
-- **Host name:** username@lxplus.cern.ch
-- **Port:** 22
-- **Connection Type:** SSH
-- **Saved Sessions:** lxplus
+**Host name:** username@lxplus.cern.ch
+
+**Port:** 22
+
+**Connection Type:** SSH
+
+**Saved Sessions:** lxplus
+
 
 - Save the settings.
 - Go to: Connections >> SSH >> X11
