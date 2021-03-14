@@ -57,7 +57,7 @@ For the initial password, you should send another email as:
 >
 > My account "xxxxx" is now added to the CMS (zh) group, however it's currently disabled. Could you activate my account and send my initial password, please?
 > Thank you.
-
+> 
 > Best regards,
 > Surname, Name
 > HRpersonId :
