@@ -22,7 +22,7 @@ You will use the **HRPersonID** number in the next mail.
 When you receive the mail above, send an email to `cms.people@cern.ch` and `service-desk@cern.ch` as below.
 
 
-**Mail Subject : CERN Account**
+***Mail Subject : CERN Account***
 > Dear Sir / Madame,
 >
 >	I'm now registered in CMS as 'Non-Doctoral Student' from my institute (ADANA-CUKUROVA). Could you provide my "Username" and "Initial Password", please.
