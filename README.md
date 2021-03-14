@@ -54,7 +54,7 @@ After these steps, they should send you your username. Probably they'll **not** 
 
 
 
-#### If they won't send you an initial password:
+## If they won't send you an initial password:
 For the initial password, you should send another email to `service-desk@cern.ch` as:
 
 ***Mail Subject: CMS Account Activation & Initial Password***
