@@ -82,6 +82,52 @@ ps. these steps can be changed partly but more or less the process is the same.
 
 For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGetAccount
 
+
+------------
+------------
+------------
+
+
+
 # How to start data analysis
+
+**Step-1:** Login to your lxplus area:
+
+***For Windows:***
+**Download & install:**
+- **Putty (putty-64bit-0.74-installer.msi) or newer version:** https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+- **Xming:** https://sourceforge.net/projects/xming/
+- **Winscp:** https://winscp.net/eng/download.php
+
+
+
+
+
+**Basic Linux commands:**
+
+- **ls** -- lists your files
+- **ls -lhtr** -- list your files (newer at bottom)
+- **mv filename1 filename2** -- moves a file (i.e. gives it a different name, or moves it into a different directory.
+- **cp filename1 filename2** -- copies a file
+- **rm filename** -- removes a file. It is wise to use the option **rm -i**, which will ask you for confirmation before actually deleting anything.
+- **diff filename1 filename2** -- compares files, and shows where they differ
+- **chmod options filename** -- lets you change the read, write, and execute permissions on your files. For example, **chmod o+r filename** will make the file readable for everyone, and **chmod o-r filename** will make it unreadable for others again.
+- **mkdir dirname** -- make a new directory
+- **cd dirname** -- change directory. You basically 'go' to another directory, and you will see the files in that directory when you do 'ls'.
+- **cd** -- without arguments, will let you to go home directory.
+- **cd ..** -- this command will get you one level up from your current position.
+- **pwd** -- tells you where you currently are.
+- **vi filename.xxx** -- vi is a text editor for your scripts. when you open the editor you can activate insert mode with pressing **i** on your keyboard and you can press **esc** to deactivate. You can see the current mode on left-bottom side. To save the file you can press **esc** first, they type **:w** and hit to **enter**. To quit from vi editor press **esc** first, type **:q** and hit **enter**. If you want to quit without saving your changes, press **esc** first, type **:q!** and hit **enter**. If you would like to save & exit, press **esc** first, type **:wq** hit **enter**.
+
+
+
+
+
+
+
+
+
+For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
+
 
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
