@@ -34,6 +34,7 @@ When you receive the mail above, send an email to `cms.people@cern.ch` as below
 
 **For Step-1:**
 They will ask you to upload a copy of your ID (english) or passport to the system.
+
 **For Step-2**
 Also they'll ask you to fill another form that your team leader (Isa Dumanoglu for CU) will approve your account.
 
