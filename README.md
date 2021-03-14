@@ -7,7 +7,7 @@
 - **Name:** Your family name (surname)
 - **First Name:** your name
 - **Institute:** Cukurova University
-- **Institute Representative: ** (should be İsa Dumanoglu but i'm not sure)
+- **Institute Representative:** (should be İsa Dumanoglu but i'm not sure)
 - **Activity:** (Should be **User**)
 
 
