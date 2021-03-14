@@ -126,6 +126,7 @@ This will open a terminal window and use your new cern account password. (you'll
 
 ***For Mac & Linux:***
 
+- Download & Install: XQuartz -- https://www.xquartz.org/
 - Open a new terminal window
 - type `ssh -Y username@lxplus.cern.ch` and hit enter
 - type your new cern account password and hit enter. (you'll not see any character while you typing your password. Hold the backspace for a while if you type your password wrong).
