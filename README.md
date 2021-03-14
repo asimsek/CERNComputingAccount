@@ -91,7 +91,7 @@ For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGet
 
 
 
-# How to start data analysis
+# How to connect to your lxplus area
 
 **Step-1:** Login to your lxplus area:
 
