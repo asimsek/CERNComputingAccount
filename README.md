@@ -99,6 +99,9 @@ For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGet
 - **Xming:** https://sourceforge.net/projects/xming/
 - **Winscp:** https://winscp.net/eng/download.php
 
+## Putty Settings:
+![Putty Settings](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/putty.png "Putty Settings")
+
 
 
 ------------
