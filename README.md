@@ -99,11 +99,25 @@ For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGet
 - **Xming:** https://sourceforge.net/projects/xming/
 - **Winscp:** https://winscp.net/eng/download.php
 
-## Putty Settings:
+## Putty Settings
+
+**Host name:** username@lxplus.cern.ch
+**Port:** 22
+**Connection Type:** SSH
+**Saved Sessions:** lxplus
+
+- Save the settings.
+- Go to: Connections >> SSH >> X11
+- Enable X11 forwarding
+- X display location: localhost:0.0
+
+go back to **Session** tab on left side (first category), and save the session again (to save the ssh settings to your profile). Now you can double click on it or click to load while its selected.
+
+This will open a terminal window and use your new cern account password. It's same with you email. (Btw, to see your e-mails: https://mmm.cern.ch/owa/). Now you're able to use your lxplus account. (list your folders with **ls -lhtr** when you login and use private folder for your analysis. **cd private**)
+
+> ps. lxplus6 is an old version and lxplus.cern.ch will direct you to latest version. (picture is old)
+
 ![Putty Settings](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/putty.png "Putty Settings")
-
-
-
 ------------
 
 
