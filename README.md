@@ -103,6 +103,10 @@ For more information: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGet
 
 ## Putty Settings
 
+![Putty Settings](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/putty.png "Putty Settings")
+
+> ps. lxplus6 is an old version and lxplus.cern.ch will direct you to latest version. (picture is old)
+
 **Host name:** username@lxplus.cern.ch
 
 **Port:** 22
@@ -125,9 +129,7 @@ This will open a terminal window and use your new cern account password. (you'll
 
 ![Xming](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/xming_exit.png "Xming")
 
-> ps. lxplus6 is an old version and lxplus.cern.ch will direct you to latest version. (picture is old)
 
-![Putty Settings](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/putty.png "Putty Settings")
 
 ------------
 
