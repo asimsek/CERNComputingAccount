@@ -452,13 +452,22 @@ vi plugins/DemoAnalyzer.cc
 **Define the header files:**
 ```cpp
 #find:
-#include <memory>
+#include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
 
 #replace with:
-#include <memory>
+#include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
+
+
+#include "FWCore/Framework/interface/Frameworkfwd.h"
+#include "FWCore/Framework/interface/one/EDAnalyzer.h"
+#include "FWCore/Framework/interface/Event.h"
+#include "FWCore/Framework/interface/MakerMacros.h"
+#include "FWCore/Utilities/interface/InputTag.h"
+#include "FWCore/ParameterSet/interface/ParameterSet.h"
+#include "FWCore/ServiceRegistry/interface/Service.h"
+#include "CommonTools/UtilAlgos/interface/TFileService.h"
 #include "TH1.h"
 #include "TH1D.h"
-#include "CommonTools/UtilAlgos/interface/TFileService.h"
 ```
 
 
@@ -497,7 +506,7 @@ DemoAnalyzer::beginJob()
 }
 ```
 
-**Let's comment the cout with adding `#` on the beginning of the line and add the commands for the filling histograms:**
+**Let's comment the cout with adding `//` on the beginning of the line and add the commands for the filling histograms:**
 
 ```cpp
 #find
@@ -505,7 +514,7 @@ DemoAnalyzer::beginJob()
 
 
 #replace
-		#cout << "ieta: " << ieta << "  --  Energy:" << energy << endl;
+		//cout << "ieta: " << ieta << "  --  Energy:" << energy << endl;
 
 		 if(id.subdet() == HcalEndcap){
 			histo1D["HEiEta"]->Fill(ieta);
