@@ -203,7 +203,7 @@ cmsrel CMSSW_10_2_5_patch1
 You'll see a warning as following:
 
 > WARNING: Release CMSSW_10_2_5_patch1 is not available for architecture slc7_amd64_gcc820.
-
+>
 > Developer's area is created for available architecture **slc7_amd64_gcc700**.
 
 
@@ -228,7 +228,7 @@ scram b -j 4
 ```
 
 
-Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc`
+Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc` . For the usage of `vi` editor, see [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commandshttp:// "basic linux commands") section above.
 
 ```bash
 vi plugins/DemoAnalyzer.cc
@@ -302,12 +302,32 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 	if (hbhehits_.isValid()) {
 		for (HBHERecHitCollection::const_iterator j=hbhe_hits->begin(); j!=hbhe_hits->end(); j++) {
 			// This for loop is looping in each event!
-
+			HcalDetId id = (*j).id();
+			int ieta= id.ieta();
+			float energy = (*j).energy();
+			cout << "ieta: " << ieta.c_str() << "Energy:" << energy.c_str();
 
 		}
 	}
 ```
 
+
+```cpp
+#find
+//
+// class declaration
+//
+
+#replace
+//
+// class declaration
+//
+#include "DataFormats/HcalDigi/interface/HBHEDataFrame.h"
+#include "DataFormats/HcalRecHit/interface/HBHERecHit.h"
+#include "DataFormats/HcalDetId/interface/HcalSubdetector.h"
+#include "Geometry/CaloGeometry/interface/CaloSubdetectorGeometry.h"
+#include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
+```
 
 ------------
 
