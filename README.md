@@ -525,6 +525,31 @@ DemoAnalyzer::beginJob()
 
 Save the file and quit with pressing `esc`and typing `:wq`.
 
+
+**Now let's make necessary changes in `plugins/BuildFile.xml ` file:**
+
+```bash
+vi plugins/BuildFile.xml
+```
+
+
+```bash
+#find
+<use name="FWCore/Framework"/>
+<use name="FWCore/PluginManager"/>
+<use name="FWCore/ParameterSet"/>
+<use name="DataFormats/TrackReco"/>
+<flags EDM_PLUGIN="1"/>
+
+#replace
+<use name="FWCore/Framework"/>
+<use name="FWCore/PluginManager"/>
+<use name="FWCore/ParameterSet"/>
+<use name="DataFormats/TrackReco"/>
+<use name="CommonTools/UtilAlgos"/>
+<flags EDM_PLUGIN="1"/>
+```
+
 **For more statistic, we need to set -1 for the `maxEvents` in `python/ConfFile_cfg.py` file.**
 
 ```bash
