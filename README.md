@@ -235,6 +235,7 @@ vi plugins/DemoAnalyzer.cc
 ```
 
 
+**We're defining the header files:**
 ```cpp
 #find
 //
@@ -252,6 +253,7 @@ vi plugins/DemoAnalyzer.cc
 #include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
 ```
 
+**Define the namespaces:**
 ```cpp
 #find
 using reco::TrackCollection;
@@ -262,6 +264,7 @@ using namespace edm;
 using namespace reco;
 ```
 
+**Replace the token to analyze HCal-Barrel & HCal-EndCap:**
 ```cpp
 #find
 // ----------member data ---------------------------
@@ -272,16 +275,14 @@ edm::EDGetTokenT<TrackCollection> tracksToken_;  //used to select what tracks to
 EDGetTokenT<HBHERecHitCollection> hbherechit_;
 ```
 
+**Delete unnecessary part:**
 ```cpp
 #find & Delete (with : sign)
 :
 tracksToken_(consumes<TrackCollection>(iConfig.getUntrackedParameter<edm::InputTag>("tracks")))
 ```
 
-```cpp
-
-```
-
+**Initialize the HBHE collection:**
 ```cpp
 #find
 //now do what ever initialization is needed
@@ -291,7 +292,7 @@ tracksToken_(consumes<TrackCollection>(iConfig.getUntrackedParameter<edm::InputT
 hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>("HBHERecHitCollection"));
 ```
 
-
+**Get the data from root file by token:**
 ```cpp
 #find
    Handle<HBHERecHitCollection> hbhehits_;
@@ -302,10 +303,9 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
    iEvent.getByToken(hbherechit_, hbhehits_);
 ```
 
+**Replace the track loop with HBHE loop:**
 ```cpp
 #find
-    Handle<TrackCollection> tracks;
-    iEvent.getByToken(tracksToken_, tracks);
     for(TrackCollection::const_iterator itTrack = tracks->begin();
         itTrack != tracks->end();
         ++itTrack) {
@@ -326,6 +326,7 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 	}
 ```
 
+Now, you can press `esc`to deactivate insert mode in `vi` editor and save&quit with typing `:wq`. (for more information see: [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commands "basic linux commands"))
 
 ------------
 
