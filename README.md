@@ -591,7 +591,7 @@ scram b -j 4
 cmsRun python/ConfFile_cfg.py
 ```
 
-**You should see cout as below:**
+**You should see some text as below:**
 
 
     =============================================
@@ -614,6 +614,23 @@ cmsRun python/ConfFile_cfg.py
     
     dropped waiting message count 0
     
+
+
+**Now you can check your results:**
+
+```bash
+root -l Results2018.root
+```
+
+This will activate the root with your result file.
+
+**Open a `TBrowser` to see the results:**
+
+```bash
+TBrowser b
+```
+
+**This command line will open a new browser window:**
 
 
 
