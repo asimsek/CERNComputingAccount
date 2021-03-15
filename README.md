@@ -637,6 +637,19 @@ When you see the browser, (be patient, it can be slow) double click on your root
 ![Root Usage](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/root.png "Root Usage")
 
 
+To save the plot as `pdf` or `png`, click the `File` on top and click on `save as`. Give a name and click on `save` button. Now you can close the TBrowser and check the pdf or png file in your directory. To do that, you need to quit from root with typing `.q` and press enter. Then use the `ls -lhtr` command to list your directory.
+
+To display your png or pdf file use `display` command:
+
+```bash
+display FileName.png
+```
+
+> ps. display shows both png and pdf. You can also use `evince` command for only pdfs. The usage is same, just replace `display` with `evince`.
+
+------------
+
+> **Congratulations!! From now, you can easily analyze the CMS data.**
 
 ------------
 
