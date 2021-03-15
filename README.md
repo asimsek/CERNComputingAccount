@@ -699,12 +699,7 @@ display FileName.png
 For more, please follow this twiki page:
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
 
-[CCA]: https://github.com/asimsek/CMSStarterKit#cern-computing-account
-[ConnectLxplus]: https://github.com/asimsek/CMSStarterKit#how-to-connect-to-your-lxplus-area
-[Putty]: https://github.com/asimsek/CMSStarterKit#putty-settings
-[DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-data-analysis
+
 [CMSComputingAcc]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#cern-cms-computing-account
 [ConnectLxplus]: https://github.com/asimsek/CMSStarterKit#how-to-connect-to-your-lxplus-area
-[DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-cms-data-analysis
-
 [DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-cms-data-analysis
