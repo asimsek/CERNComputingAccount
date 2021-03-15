@@ -260,8 +260,6 @@ using reco::TrackCollection;
 using namespace std;
 using namespace edm;
 using namespace reco;
-using namespace trigger;
-using namespace l1t;
 ```
 
 ```cpp
@@ -323,10 +321,22 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 			HcalDetId id = (*j).id();
 			int ieta= id.ieta();
 			float energy = (*j).energy();
-			cout << "ieta: " << ieta.c_str() << "Energy:" << energy.c_str();
+			cout << "ieta: " << ieta << "Energy:" << energy;
 		}
 	}
 ```
+
+
+------------
+
+We need to create a config file in python folder and add some code lines into `ConfFile_cfg.py` file.
+```bash
+vi python/ConfFile_cfg.py
+```
+
+
+
+
 
 
 ------------
