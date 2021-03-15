@@ -449,6 +449,17 @@ It's very hard to understand the detector with infinite number of entries. We're
 vi plugins/DemoAnalyzer.cc
 ```
 
+**Define the header files:**
+```cpp
+#find:
+#include <memory>
+
+#replace with:
+#include <memory>
+#include "TH1.h"
+#include "TH1D.h"
+```
+
 
 **We need to define histogram iteration to create histograms:**
 ```cpp
