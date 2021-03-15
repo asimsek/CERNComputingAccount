@@ -443,8 +443,63 @@ cmsRun python/ConfFile_cfg.py
 
 
 You should see some output including ieta and energy values of the #hits.
-Now lets create a plot with them.
+It's very hard to understand the detector with infinite number of entries. We're using histograms to understand the numbers and detector. Now let's plot these numbers in a histogram.
 
+```bash
+vi plugins/DemoAnalyzer.cc
+```
+
+
+**We need to define histogram iteration to create histograms:**
+```bash
+#find
+// ----------member data ---------------------------
+
+#replace
+	// ----------member data ---------------------------
+	map<string, TH1D*> histo1D;
+	map<string, TH1D*>::iterator histo1Diter;
+```
+
+
+**We need to define histograms in beginJob() class:**
+```bash
+#find
+DemoAnalyzer::beginJob()
+{
+}
+
+#replace
+DemoAnalyzer::beginJob()
+{
+	cout<<"Begin Job"<<endl;
+	edm::Service<TFileService> fs;
+
+	histo1D["HEiEta"] = fs->make<TH1D>("HEiEta", "iEta vs Number Of Hits",60,-30,30);
+	histo1D["HEiEta"]->GetXaxis()->SetTitle("i#eta");
+	histo1D["HEiEta"]->GetYaxis()->SetTitle("Number of Hits");
+
+	histo1D["HERecHitEnergy"] = fs->make<TH1D>( "HERecHitEnergy", "HE: Energy Distibution",300,0,300);
+	histo1D["HERecHitEnergy"]->GetXaxis()->SetTitle("GeV");
+	histo1D["HERecHitEnergy"]->GetYaxis()->SetTitle("Number of Hits");
+}
+```
+
+**Let's comment the cout with adding `#` on the beginning of the line and add the commands for the filling histograms:**
+
+```bash
+#find
+		cout << "ieta: " << ieta << "  --  Energy:" << energy << endl;
+
+
+#replace
+		#cout << "ieta: " << ieta << "  --  Energy:" << energy << endl;
+
+		 if(id.subdet() == HcalEndcap){
+			histo1D["HEiEta"]->Fill(ieta);
+			histo1D["HERecHitEnergy"]->Fill(energy);
+		}
+```
 
 
 
