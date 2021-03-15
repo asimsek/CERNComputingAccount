@@ -321,7 +321,7 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 			HcalDetId id = (*j).id();
 			int ieta= id.ieta();
 			float energy = (*j).energy();
-			cout << "ieta: " << ieta << "Energy:" << energy;
+			cout << "ieta: " << ieta << "Energy:" << energy << endl;
 		}
 	}
 ```
@@ -334,7 +334,91 @@ We need to create a config file in python folder and add some code lines into `C
 vi python/ConfFile_cfg.py
 ```
 
+**Activate the insert mode and add the following commands**
+```python
+import FWCore.ParameterSet.Config as cms
+import datetime
+import PhysicsTools.PythonAnalysis.LumiList as LumiList
+from FWCore.ParameterSet.VarParsing import VarParsing
 
+options = VarParsing ('python')
+
+options.register('reportEvery', 1,
+    VarParsing.multiplicity.singleton,
+    VarParsing.varType.int,
+    "Report every N events (default is N=1000)"
+)
+
+options.register('process', '146908',
+    VarParsing.multiplicity.singleton,
+    VarParsing.varType.string,
+    "MC-simulated event type"
+)
+
+options.register('wantSummary', False,
+    VarParsing.multiplicity.singleton,
+    VarParsing.varType.bool,
+    "Print out trigger and timing summary"
+)
+
+options.parseArguments()
+
+
+process = cms.Process("Test")
+
+
+process.load('Configuration.StandardSequences.Services_cff')
+process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi')
+process.load('FWCore.MessageService.MessageLogger_cfi')
+process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
+process.load('Configuration.StandardSequences.MagneticField_AutoFromDBCurrent_cff')
+process.load('CommonTools.RecoAlgos.HBHENoiseFilterResultProducer_cfi')
+process.load("RecoJets.Configuration.CaloTowersES_cfi")
+process.load("Configuration.StandardSequences.RawToDigi_Data_cff")
+process.load("RecoLocalCalo.Configuration.hcalLocalReco_cff")
+
+
+process.MessageLogger.cerr.FwkReport.reportEvery = 1
+
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
+
+process.source = cms.Source("PoolSource",
+    fileNames = cms.untracked.vstring(  *(
+        # Root Files
+        'file:/eos/cms/store/user/asimsek/Run2018E/023F1B34-4E2E-A343-8E2C-09C411E86530.root',
+        #'file:/afs/cern.ch/cms/Tutorials/TWIKI_DATA/TTJets_8TeV_53X.root',
+        )
+    )
+)
+
+
+OutputFileNames = "Results2018.root"
+
+process.TFileService = cms.Service("TFileService",
+    fileName = cms.string(OutputFileNames)
+)
+
+
+process.options   = cms.untracked.PSet(
+    wantSummary = cms.untracked.bool(options.wantSummary),
+    allowUnscheduled = cms.untracked.bool(True),
+    #SkipEvent = cms.untracked.vstring('ProductNotFound')
+)
+
+
+from Configuration.AlCa.autoCond import autoCond
+process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff")
+process.GlobalTag.globaltag = '101X_dataRun2_Express_v8'
+
+
+
+process.demo = cms.EDAnalyzer('DemoAnalyzer',
+        HBHERecHitCollection = cms.InputTag("hbhereco"),
+)
+
+
+process.p = cms.Path(process.demo)
+```
 
 
 
