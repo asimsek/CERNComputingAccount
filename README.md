@@ -333,6 +333,24 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 Now, you can press `esc`to deactivate insert mode in `vi` editor and save&quit with typing `:wq`. (for more information see: [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commands "basic linux commands"))
 
 ------------
+**Before the config file, we need to create another file which is necessary:**
+```bash
+vi python/CfiFile_cfi.py
+```
+
+Activate the `vi` editor with pressing `i` on your keyboard and paste the following command lines:
+
+```python
+import FWCore.ParameterSet.Config as cms
+
+demo = cms.EDAnalyzer('DemoAnalyzer'
+)
+```
+
+press `esc` and type `:wq` to save&exit.
+
+
+------------
 
 We need to create a config file in python folder and add some code lines into `ConfFile_cfg.py` file.
 ```bash
