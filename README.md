@@ -451,7 +451,7 @@ vi plugins/DemoAnalyzer.cc
 
 
 **We need to define histogram iteration to create histograms:**
-```bash
+```c++
 #find
 // ----------member data ---------------------------
 
@@ -463,7 +463,7 @@ vi plugins/DemoAnalyzer.cc
 
 
 **We need to define histograms in beginJob() class:**
-```bash
+```c++
 #find
 DemoAnalyzer::beginJob()
 {
@@ -487,7 +487,7 @@ DemoAnalyzer::beginJob()
 
 **Let's comment the cout with adding `#` on the beginning of the line and add the commands for the filling histograms:**
 
-```bash
+```c++
 #find
 		cout << "ieta: " << ieta << "  --  Energy:" << energy << endl;
 
