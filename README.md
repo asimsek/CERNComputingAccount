@@ -502,6 +502,41 @@ DemoAnalyzer::beginJob()
 ```
 
 
+Save the file and quit with pressing `esc`and typing `:wq`.
+
+**For more statistic, we need to set -1 for the `maxEvents` in `python/ConfFile_cfg.py` file.**
+
+```bash
+vi python/ConfFile_cfg.py
+```
+
+
+```bash
+#find
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
+
+#replace
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+```
+
+save&quit with pressing `esc` and typing `:wq`.
+
+
+**Since we made changes in cc file (plugins/DemoAnalyzer.cc), we need to re-compile:**
+```bash
+cd $CMSSW_BASE/src/DataAnalyzer/DemoAnalyzer
+cmsenv
+scram b -j 4
+```
+
+**Let's run it again with `cmsRun`:**
+
+```bash
+cmsRun python/ConfFile_cfg.py
+```
+
+
+
 
 
 
