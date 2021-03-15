@@ -1,4 +1,12 @@
-# CERN Computing Account
+# Index
+
+- [[1] CERN CMS Computing Account][CCA]
+- [[2] How to connect to your lxplus area][ConnectLxplus]
+- [[3] CMS Data Analysis][DataAnalysis]
+
+
+
+# CERN CMS Computing Account
 > How to request a computing account for a new student.
 
 1. Go to `https://cms.cern.ch/iCMS/jsp/secr/reg/regCMS.jsp` and fill the form.
@@ -172,7 +180,7 @@ For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
 
 
 
-# CERN Data Analysis 
+# CERN CMS Data Analysis 
 
 Log-in to your lxplus account and go to your `private` folder.
 
@@ -677,3 +685,8 @@ display FileName.png
 
 For more, please follow this twiki page:
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
+
+[CCA]: https://github.com/asimsek/CMSStarterKit#cern-computing-account
+[ConnectLxplus]: https://github.com/asimsek/CMSStarterKit#how-to-connect-to-your-lxplus-area
+[Putty]: https://github.com/asimsek/CMSStarterKit#putty-settings
+[DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-data-analysis
