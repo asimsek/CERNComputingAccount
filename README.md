@@ -228,7 +228,7 @@ scram b -j 4
 ```
 
 
-Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc` . For the usage of `vi` editor, see [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commandshttp:// "basic linux commands") section above.
+Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc` . For the usage of `vi` editor, see [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commands "basic linux commands") section above.
 
 ```bash
 vi plugins/DemoAnalyzer.cc
