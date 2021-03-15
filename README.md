@@ -236,7 +236,7 @@ vi plugins/DemoAnalyzer.cc
 
 ```cpp
 #find
-	using reco::TrackCollection;
+using reco::TrackCollection;
 
 #replace
 using namespace std;
@@ -244,7 +244,6 @@ using namespace edm;
 using namespace reco;
 using namespace trigger;
 using namespace l1t;
-	
 ```
 
 ```cpp
@@ -308,6 +307,13 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 		}
 	}
 ```
+
+
+------------
+
+------------
+
+
 
 For more, please follow this twiki page:
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
