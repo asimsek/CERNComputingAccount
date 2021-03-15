@@ -347,7 +347,7 @@ demo = cms.EDAnalyzer('DemoAnalyzer'
 )
 ```
 
-press `esc` and type `:wq` to save&exit.
+press `esc` and type `:wq` to save&exit. (For more vi commands, please see: [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commands "basic linux commands"))
 
 
 ------------
