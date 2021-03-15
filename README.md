@@ -323,7 +323,7 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 			HcalDetId id = (*j).id();
 			int ieta= id.ieta();
 			float energy = (*j).energy();
-			cout << "ieta: " << ieta << "Energy:" << energy << endl;
+			cout << "ieta: " << ieta << "  --  Energy:" << energy << endl;
 		}
 	}
 ```
@@ -422,6 +422,23 @@ process.demo = cms.EDAnalyzer('DemoAnalyzer',
 
 process.p = cms.Path(process.demo)
 ```
+
+
+When you make any change in `plugins/DemoAnalyzer.cc` file, you need to re-compile the file:
+
+```bash
+cd $CMSSW_BASE/src/DataAnalyzer/DemoAnalyzer
+cmsenv
+scram b -j 4
+```
+
+Now you can run your scripts with `cmsRun` command.
+
+```bash
+cmsRun python/ConfFile_cfg.py
+```
+
+
 
 
 
