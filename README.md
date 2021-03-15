@@ -346,6 +346,7 @@ from FWCore.ParameterSet.VarParsing import VarParsing
 
 options = VarParsing ('python')
 
+
 options.register('reportEvery', 1,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.int,
@@ -380,21 +381,22 @@ process.load("RecoJets.Configuration.CaloTowersES_cfi")
 process.load("Configuration.StandardSequences.RawToDigi_Data_cff")
 process.load("RecoLocalCalo.Configuration.hcalLocalReco_cff")
 
-
+# report every #1 hit! You can change it to any number you like.
 process.MessageLogger.cerr.FwkReport.reportEvery = 1
 
+# How many event you want to analyze. To analyze all events change 1000 with -1
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
 
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(  *(
-        # Root Files
+        # Add your root files here! (don't forget to add comma for the end of each line!)
         'file:/eos/cms/store/user/asimsek/Run2018E/023F1B34-4E2E-A343-8E2C-09C411E86530.root',
         #'file:/afs/cern.ch/cms/Tutorials/TWIKI_DATA/TTJets_8TeV_53X.root',
         )
     )
 )
 
-
+# Give any output name you like ( it's better to end with .root )
 OutputFileNames = "Results2018.root"
 
 process.TFileService = cms.Service("TFileService",
@@ -411,6 +413,7 @@ process.options   = cms.untracked.PSet(
 
 from Configuration.AlCa.autoCond import autoCond
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff")
+# You can change the global tag here but you need to find spesific global tag for each dataset, run number or root files.
 process.GlobalTag.globaltag = '101X_dataRun2_Express_v8'
 
 
@@ -437,6 +440,11 @@ Now you can run your scripts with `cmsRun` command.
 ```bash
 cmsRun python/ConfFile_cfg.py
 ```
+
+
+You should see some output including ieta and energy values of the #hits.
+Now lets create a plot with them.
+
 
 
 
