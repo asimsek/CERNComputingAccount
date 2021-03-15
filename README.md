@@ -632,6 +632,10 @@ TBrowser b
 
 **This command line will open a new browser window:**
 
+When you see the browser, (be patient, it can be slow) double click on your root file `Results2018.root` on the left side, then `demo` and `HEiEta` histogram to see the results on the right side.
+
+![Root Usage](https://raw.githubusercontent.com/asimsek/CERNComputingAccount/main/root.png "Root Usage")
+
 
 
 ------------
