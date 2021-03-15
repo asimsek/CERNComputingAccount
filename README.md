@@ -174,5 +174,140 @@ For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
 
 # CERN Data Analysis 
 
-Follow this twiki page:
+Log-in to your lxplus account and go to your `private` folder.
+
+```bash
+cd private
+mkdir CMSDataAnalyzerStudy
+cd CMSDataAnalyzerStudy
+echo $0
+```
+
+`echo $0`command will show your shell type. Use one of the following command lines appropriate for your shell type.
+
+
+```bash
+# for Bash User
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+
+# for csh user
+source /cvmfs/cms.cern.ch/cmsset_default.csh
+```
+
+Create a new CMSSW version.
+```bash
+cmsrel CMSSW_10_2_5_patch1
+```
+
+
+You'll see a warning as following:
+
+> WARNING: Release CMSSW_10_2_5_patch1 is not available for architecture slc7_amd64_gcc820.
+
+> Developer's area is created for available architecture **slc7_amd64_gcc700**.
+
+
+This means, you need to change your architecture with the following command line.
+
+
+```bash
+export SCRAM_ARCH=slc7_amd64_gcc700
+cd CMSSW_10_2_5_patch1/src
+cmsenv
+mkdir DataAnalyzer
+cd DataAnalyzer
+```
+
+> ps: **cmsenv** command is crutial for usage of all cms functions. Don't forget to use it before using the cms commands ( root, cmsRun, edmProvDump, edmDumpEventContent, etc. )
+
+Create a new EDAnalyzer:
+```bash
+mkedanlzr DemoAnalyzer
+cd DemoAnalyzer
+scram b -j 4
+```
+
+
+Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc`
+
+```bash
+vi plugins/DemoAnalyzer.cc
+```
+
+```cpp
+#find
+	using reco::TrackCollection;
+
+#replace
+using namespace std;
+using namespace edm;
+using namespace reco;
+using namespace trigger;
+using namespace l1t;
+	
+```
+
+```cpp
+#find
+// ----------member data ---------------------------
+edm::EDGetTokenT<TrackCollection> tracksToken_;  //used to select what tracks to read from configuration file
+
+#replace
+// ----------member data ---------------------------
+EDGetTokenT<HBHERecHitCollection> hbherechit_;
+```
+
+```cpp
+#find & Delete (with : sign)
+:
+tracksToken_(consumes<TrackCollection>(iConfig.getUntrackedParameter<edm::InputTag>("tracks")))
+```
+
+```cpp
+
+```
+
+```cpp
+#find
+//now do what ever initialization is needed
+
+#replace
+//now do what ever initialization is needed
+hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>("HBHERecHitCollection"));
+```
+
+
+```cpp
+#find
+   Handle<HBHERecHitCollection> hbhehits_;
+   iEvent.getByToken(hbherechit_, hbhehits_);
+
+#replace
+   Handle<HBHERecHitCollection> hbhehits_;
+   iEvent.getByToken(hbherechit_, hbhehits_);
+```
+
+```cpp
+#find
+    Handle<TrackCollection> tracks;
+    iEvent.getByToken(tracksToken_, tracks);
+    for(TrackCollection::const_iterator itTrack = tracks->begin();
+        itTrack != tracks->end();
+        ++itTrack) {
+      // do something with track parameters, e.g, plot the charge.
+      // int charge = itTrack->charge();
+    }
+
+#replace
+	const HBHERecHitCollection* hbhe_hits = hbhehits_.failedToGet () ? 0 : &*hbhehits_;
+	if (hbhehits_.isValid()) {
+		for (HBHERecHitCollection::const_iterator j=hbhe_hits->begin(); j!=hbhe_hits->end(); j++) {
+			// This for loop is looping in each event!
+
+
+		}
+	}
+```
+
+For more, please follow this twiki page:
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCALSHELL=bash
