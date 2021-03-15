@@ -245,6 +245,8 @@ vi plugins/DemoAnalyzer.cc
 //
 // class declaration
 //
+#include "DataFormats/HcalDetId/interface/HcalDetId.h"
+#include "DataFormats/HcalRecHit/interface/HcalRecHitCollections.h"
 #include "DataFormats/HcalDigi/interface/HBHEDataFrame.h"
 #include "DataFormats/HcalRecHit/interface/HBHERecHit.h"
 #include "DataFormats/HcalDetId/interface/HcalSubdetector.h"
