@@ -143,7 +143,7 @@ This will open a terminal window and use your new cern account password. (you'll
 - Now you're able to use your lxplus account. (list your folders with **ls -lhtr** when you login and use private folder for your analysis. **cd private**)
 
 
-**Basic Linux commands:**
+#### Basic Linux commands:
 
 - **ls** -- lists your files
 - **ls -lhtr** -- list your files (newer at bottom)
