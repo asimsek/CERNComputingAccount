@@ -219,7 +219,21 @@ This means, you need to change your architecture with the following command line
 
 
 ```bash
+echo $0
+```
+
+`echo $0` command will show your shell type. Use one of the following command lines appropriate for your shell type.
+
+```bash
+# for Bash User
 export SCRAM_ARCH=slc7_amd64_gcc700
+
+# for csh user
+setenv SCRAM_ARCH slc7_amd64_gcc700
+```
+
+
+```bash
 cd CMSSW_10_2_5_patch1/src
 cmsenv
 mkdir DataAnalyzer
