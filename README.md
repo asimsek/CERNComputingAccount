@@ -230,6 +230,8 @@ scram b -j 4
 
 Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc` . For the usage of `vi` editor, see [basic linux commands](https://github.com/asimsek/CERNComputingAccount/blob/main/README.md#basic-linux-commands "basic linux commands") section above.
 
+> ps: This tutorial & general CMS data analysis needs basic c++ and python knowledge. Also, you should be familiarized with the linux commands.
+
 ```bash
 vi plugins/DemoAnalyzer.cc
 ```
