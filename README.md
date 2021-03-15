@@ -248,6 +248,7 @@ vi plugins/DemoAnalyzer.cc
 //
 // class declaration
 //
+#include "DataFormats/HcalDetId/interface/HcalDetId.h"
 #include "DataFormats/HcalDigi/interface/HBHEDataFrame.h"
 #include "DataFormats/HcalRecHit/interface/HBHERecHit.h"
 #include "DataFormats/HcalDetId/interface/HcalSubdetector.h"
@@ -451,24 +452,32 @@ vi plugins/DemoAnalyzer.cc
 
 **Define the header files:**
 ```cpp
+#find
+#include <map>
+
+#replace
+#include <map>
+#include <string>
+#include <fstream>
+#include <iomanip>
+#include <locale>
+```
+
+**And also:**
+```cpp
 #find:
 #include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
 
 #replace with:
 #include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
 
-
-#include "FWCore/Framework/interface/Frameworkfwd.h"
-#include "FWCore/Framework/interface/one/EDAnalyzer.h"
-#include "FWCore/Framework/interface/Event.h"
-#include "FWCore/Framework/interface/MakerMacros.h"
-#include "FWCore/Utilities/interface/InputTag.h"
-#include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/ServiceRegistry/interface/Service.h"
 #include "CommonTools/UtilAlgos/interface/TFileService.h"
 #include "TH1.h"
 #include "TH1D.h"
 ```
+
+
 
 
 **We need to define histogram iteration to create histograms:**
