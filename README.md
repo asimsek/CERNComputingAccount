@@ -234,6 +234,24 @@ Now we need to change & add some code lines into `plugins/DemoAnalyzer.cc` . For
 vi plugins/DemoAnalyzer.cc
 ```
 
+
+```cpp
+#find
+//
+// class declaration
+//
+
+#replace
+//
+// class declaration
+//
+#include "DataFormats/HcalDigi/interface/HBHEDataFrame.h"
+#include "DataFormats/HcalRecHit/interface/HBHERecHit.h"
+#include "DataFormats/HcalDetId/interface/HcalSubdetector.h"
+#include "Geometry/CaloGeometry/interface/CaloSubdetectorGeometry.h"
+#include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
+```
+
 ```cpp
 #find
 using reco::TrackCollection;
@@ -311,23 +329,6 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 	}
 ```
 
-
-```cpp
-#find
-//
-// class declaration
-//
-
-#replace
-//
-// class declaration
-//
-#include "DataFormats/HcalDigi/interface/HBHEDataFrame.h"
-#include "DataFormats/HcalRecHit/interface/HBHERecHit.h"
-#include "DataFormats/HcalDetId/interface/HcalSubdetector.h"
-#include "Geometry/CaloGeometry/interface/CaloSubdetectorGeometry.h"
-#include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
-```
 
 ------------
 
