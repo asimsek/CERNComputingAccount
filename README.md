@@ -1,6 +1,6 @@
 # Index
 
-- [[1] CERN CMS Computing Account][CCA]
+- [[1] How To Apply For a CMS Computing Account][CMSComputingAcc]
 - [[2] How to connect to your lxplus area][ConnectLxplus]
 - [[3] CMS Data Analysis][DataAnalysis]
 
@@ -690,3 +690,6 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCA
 [ConnectLxplus]: https://github.com/asimsek/CMSStarterKit#how-to-connect-to-your-lxplus-area
 [Putty]: https://github.com/asimsek/CMSStarterKit#putty-settings
 [DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-data-analysis
+[CMSComputingAcc]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#cern-cms-computing-account
+[ConnectLxplus]: https://github.com/asimsek/CMSStarterKit#how-to-connect-to-your-lxplus-area
+[DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-cms-data-analysis
