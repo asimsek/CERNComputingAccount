@@ -245,8 +245,6 @@ vi plugins/DemoAnalyzer.cc
 //
 // class declaration
 //
-#include "DataFormats/HcalDetId/interface/HcalDetId.h"
-#include "DataFormats/HcalRecHit/interface/HcalRecHitCollections.h"
 #include "DataFormats/HcalDigi/interface/HBHEDataFrame.h"
 #include "DataFormats/HcalRecHit/interface/HBHERecHit.h"
 #include "DataFormats/HcalDetId/interface/HcalSubdetector.h"
@@ -326,7 +324,6 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 			int ieta= id.ieta();
 			float energy = (*j).energy();
 			cout << "ieta: " << ieta.c_str() << "Energy:" << energy.c_str();
-
 		}
 	}
 ```
