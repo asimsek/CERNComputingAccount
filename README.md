@@ -18,6 +18,9 @@
 - **Activity:** (Should be **CMS User**, not sure)
 
 
+- **Activity:** HCAL
+- **Activity Detail:** Data Analysis with CMS data
+
 2. Click on `Ask CMS secretariat` button.
 
 > After the form, you'll receive an email with your **HRPersonID** as:
