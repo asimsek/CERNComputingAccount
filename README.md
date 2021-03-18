@@ -17,13 +17,10 @@
 - **Institute Representative:** Isa Dumanoglu
 - **Activity:** (Should be **CMS User**, not sure)
 
--------
-
+2. Click on `Ask CMS secretariat` button.
 
 - **Activity:** HCAL
 - **Activity Detail:** Data Analysis with CMS data
-
-2. Click on `Ask CMS secretariat` button.
 
 > After the form, you'll receive an email with your **HRPersonID** as:
 
