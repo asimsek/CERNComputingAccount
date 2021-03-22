@@ -459,7 +459,7 @@ process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_condD
 # You can change the global tag here but you need to find spesific global tag for each dataset, run number or root files.
 process.GlobalTag.globaltag = '101X_dataRun2_Express_v8'
 
-
+> https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions?redirectedfrom=CMS.SWGuideFrontierConditions#Global_Tags_for_2018_data_taking
 
 process.demo = cms.EDAnalyzer('DemoAnalyzer',
         HBHERecHitCollection = cms.InputTag("hbhereco"),
