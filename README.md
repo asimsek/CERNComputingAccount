@@ -740,6 +740,9 @@ If you succesfully added your **Grid Certificate** to your browser (Firefox, Chr
  - Click on this link to reach the VOMSAdmin server and submit the registration form:
 https://voms2.cern.ch:8443/voms/cms/user/home.action
  - After submitting the form, you will get a confirmation email that contains a link that you need to click to confirm your registration. Find the link and click it.
+
+> Select **cmsuser** on the "Select your groups and group roles" part.
+
  - Now, you need to wait for final confirmation that will be done by the VO administrators, wait up to a couple days especially on weekends.
  - When they confirm your registration request, you will get a notification email.
  - Finally, you can sign up the AUP using the link in that mail, or go directly to https://voms2.cern.ch:8443/voms/cms/aup/sign.action
