@@ -715,7 +715,6 @@ https://ca.cern.ch/ca/user/Request.aspx?template=EE2User
 
 Click on "**Download Certificate**" label and download your certificate to your computer.
 
-
 ***For Mac:***
 
 Double click on your certificate and use your fingerprint (touchID) of your Mac or type your macbook user password. Then, it'll ask your grid certificate password. Type the password that you set when you create the Grid Certificate and click "OK".
@@ -730,11 +729,22 @@ For more information, please follow this link:
 https://ca.cern.ch/ca/Help/?kbid=024010
 
 
-> Let's upload your Grid Certificate to your lxplus area.
+#### Let's upload your Grid Certificate to your lxplus area.
 
-Open a new terminal window and connect to your lxplus area with:
+> Download & install **FileZilla** app to your computer. After the installation is completed, run the application and connect your lxplus area as follows:
 
-ssh -Y yourUserName@lxplus.cern.ch
+-
+> Then upload your **Grid Certificate** to your lxplus **USER** area as indicated in the picture below.
+
+![GridCertificateUploadLxplus](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert4.png "GridCertificateUploadLxplus")
+
+
+
+
+
+After you uploaded your certificate to your lxplus user area, open a new terminal window and connect to your lxplus area with:
+
+ssh -Y **yourUserName**@lxplus.cern.ch
 
 Then follow these commands:
 
@@ -744,6 +754,7 @@ mkdir .globus
 mv myCertificate.p12 .globus
 cd ~/.globus
 openssl pkcs12 -in myCertificate.p12 -clcerts -nokeys -out usercert.pem
+openssl pkcs12 -in myCertificate.p12 -clcerts -nokeys -out $HOME/.globus/usercert.pem
 openssl pkcs12 -in myCertificate.p12 -nocerts -out userkey.pem
 chmod 400 userkey.pem
 chmod 400 usercert.pem
