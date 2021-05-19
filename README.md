@@ -724,11 +724,34 @@ Double click on your certificate and use your fingerprint (touchID) of your Mac 
 ***For Windows & Linux:***
 
 You need to add your certificate to your **Mozilla Firefox** or **Chrome** from settings of your browser.
+https://ca.cern.ch/ca/Help/?kbid=040110
 
 For more information, please follow this link:
 https://ca.cern.ch/ca/Help/?kbid=024010
 
-***Let's upload your Grid Certificate to your lxplus area.***
+
+
+***How to register in the CMS VO: ***
+
+When in you have a **Grid Certificate**, you have to register your certificate in the CMS Virtual Organisation (VO) in order to be authorized to use CMS resources.
+
+If you succesfully added your **Grid Certificate** to your browser (Firefox, Chrome, etc.) please follow these steps:
+
+ - Click on this link to reach the VOMSAdmin server and submit the registration form:
+https://voms2.cern.ch:8443/voms/cms/user/home.action
+ - After submitting the form, you will get a confirmation email that contains a link that you need to click to confirm your registration. Find the link and click it.
+ - Now, you need to wait for final confirmation that will be done by the VO administrators, wait up to a couple days especially on weekends.
+ - When they confirm your registration request, you will get a notification email.
+ - Finally, you can sign up the AUP using the link in that mail, or go directly to https://voms2.cern.ch:8443/voms/cms/aup/sign.action
+
+
+
+
+
+
+
+
+***Now, let's upload your Grid Certificate to your lxplus area.***
 
 > Download & install **FileZilla** app to your computer. After the installation is completed, run the application and connect your lxplus area as follows:
 
