@@ -750,7 +750,7 @@ https://voms2.cern.ch:8443/voms/cms/user/home.action
  - Finally, you can sign up the AUP using the link in that mail, or go directly to https://voms2.cern.ch:8443/voms/cms/aup/sign.action
 
 
-For more information, please follow this twiki page:
+>For more information, please follow this twiki page:
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideLcgAccess
 
 
