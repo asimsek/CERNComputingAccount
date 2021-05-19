@@ -722,6 +722,34 @@ Double click on your certificate and use your fingerprint (touchID) of your Mac 
 
 ![GridCertificatePassword](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert3.png "GridCertificatePassword")
 
+***For Windows & Linux:***
+
+You need to add your certificate to your **Mozilla Firefox** or **Chrome** from settings of your browser.
+
+For more information, please follow this link:
+https://ca.cern.ch/ca/Help/?kbid=024010
+
+
+> Let's upload your Grid Certificate to your lxplus area.
+
+Open a new terminal window and connect to your lxplus area with:
+
+ssh -Y yourUserName@lxplus.cern.ch
+
+Then follow these commands:
+
+```bash
+cd ~
+mkdir .globus
+mv myCertificate.p12 .globus
+cd ~/.globus
+openssl pkcs12 -in myCertificate.p12 -clcerts -nokeys -out usercert.pem
+openssl pkcs12 -in myCertificate.p12 -nocerts -out userkey.pem
+chmod 400 userkey.pem
+chmod 400 usercert.pem
+```
+
+
 
 
 
