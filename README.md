@@ -3,7 +3,7 @@
 - [[1] How To Apply For a CMS Computing Account][CMSComputingAcc]
 - [[2] How to connect to your lxplus area][ConnectLxplus]
 - [[3] CMS Data Analysis][DataAnalysis]
-
+- [[4] How to Request a Grid Certificate][HowtoRequestaGridCertificate]
 
 # CERN CMS Computing Account
 > How to request a computing account for a new student.
@@ -726,3 +726,5 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCA
 [CMSComputingAcc]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#cern-cms-computing-account
 [ConnectLxplus]: https://github.com/asimsek/CMSStarterKit#how-to-connect-to-your-lxplus-area
 [DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-cms-data-analysis
+
+[HowtoRequestaGridCertificate]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#how-to-request-a-grid-certificate
