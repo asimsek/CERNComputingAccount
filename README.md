@@ -728,8 +728,7 @@ You need to add your certificate to your **Mozilla Firefox** or **Chrome** from 
 For more information, please follow this link:
 https://ca.cern.ch/ca/Help/?kbid=024010
 
-
-#### Let's upload your Grid Certificate to your lxplus area.
+***Let's upload your Grid Certificate to your lxplus area.***
 
 > Download & install **FileZilla** app to your computer. After the installation is completed, run the application and connect your lxplus area as follows:
 
