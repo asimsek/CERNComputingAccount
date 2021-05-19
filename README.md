@@ -759,9 +759,15 @@ chmod 400 userkey.pem
 chmod 400 usercert.pem
 ```
 
+> If everything goes right, use the following command and see if you can create a proxy successfully.
 
+```bash
+voms-proxy-init --voms cms
+```
 
+> You should see a message as below indicating the VOMS connection is succesfull.
 
+![GridCertificateSuccesfull](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert5.png "GridCertificateSuccesfull")
 
 
 
