@@ -733,7 +733,9 @@ https://ca.cern.ch/ca/Help/?kbid=024010
 
 ## How to register in the CMS VO:
 
-When you have a **Grid Certificate**, you have to register your certificate in the CMS Virtual Organisation (VO) in order to be authorized to use CMS resources.
+When you have a **Grid Certificate**, you have to register your certificate in the CMS Virtual Organisation (VO) in order to be authorized to use CMS resources. 
+
+> You should note that you only need to register at your first time. When your certificate expires, you do not need to register for VO again.
 
 If you succesfully added your **Grid Certificate** to your browser (Firefox, Chrome, etc.) please follow these steps:
 
