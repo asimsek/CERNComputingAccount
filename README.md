@@ -716,7 +716,8 @@ https://ca.cern.ch/ca/user/Request.aspx?template=EE2User
 Click on "**Download Certificate**" label and download your certificate to your computer.
 
 
-***For Mac:* **
+** *For Mac:* **
+
 Double click on your certificate and use your fingerprint (touchID) of your Mac or type your macbook user password. Then, it'll ask your grid certificate password. Type the password that you set when you create the Grid Certificate and click "OK".
 
 ![GridCertificatePassword](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert3.png "GridCertificatePassword")
