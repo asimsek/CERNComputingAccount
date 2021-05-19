@@ -181,7 +181,7 @@ For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
 
 
 
-# CERN CMS Data Analysis 
+# CERN CMS Data Analysis
 
 Log-in to your lxplus account and go to your `private` folder.
 
@@ -698,6 +698,25 @@ display FileName.png
 
 ------------
 
+## How to Request a Grid Certificate
+
+> You need to get your **Grid Certificate** in order to access the CERN data and some CERN websites that requiring this certificate. Such as; CMS DAS.
+
+
+You need to go to the following link to request a CERN Grid Certificate. Type a new Grid Certificate password that you'll NOT forget.  Because you'll use that password when you want to reach the CERN data.
+
+https://ca.cern.ch/ca/user/Request.aspx?template=EE2User
+
+![GridCertificate](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert1.png "GridCertificate")
+
+
+
+
+
+
+------------
+
+------------
 
 
 For more, please follow this twiki page:
