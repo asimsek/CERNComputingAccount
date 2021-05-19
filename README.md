@@ -703,11 +703,24 @@ display FileName.png
 > You need to get your **Grid Certificate** in order to access the CERN data and some CERN websites that requiring this certificate. Such as; CMS DAS.
 
 
-You need to go to the following link to request a CERN Grid Certificate. Type a new Grid Certificate password that you'll NOT forget.  Because you'll use that password when you want to reach the CERN data.
+You need to go to the following link to request a CERN Grid Certificate. Type a new Grid Certificate password that you'll NOT forget.  Because you'll use that password when you want to reach the CERN data. Click on "Get Grid User certificate" button.
 
 https://ca.cern.ch/ca/user/Request.aspx?template=EE2User
 
 ![GridCertificate](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert1.png "GridCertificate")
+
+
+![GridCertificateDownload](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert2.png "GridCertificateDownload")
+
+
+Click on "**Download Certificate**" label and download your certificate to your computer.
+
+
+***For Mac: ***
+Double click on your certificate and use your fingerprint (touchID) of your Mac or type your macbook user password. Then, it'll ask your grid certificate password. Type the password that you set when you create the Grid Certificate and click "OK".
+
+![GridCertificatePassword](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert3.png "GridCertificatePassword")
+
 
 
 
