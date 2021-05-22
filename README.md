@@ -800,7 +800,7 @@ voms-proxy-init --voms cms
 
 
 
-# EOS Quota Request
+# How to Request an EOS Space for Users
 
 
 
