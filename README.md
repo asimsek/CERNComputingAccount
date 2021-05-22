@@ -4,6 +4,8 @@
 - [[2] How to connect to your lxplus area][ConnectLxplus]
 - [[3] CMS Data Analysis][DataAnalysis]
 - [[4] How to Request a Grid Certificate][HowtoRequestaGridCertificate]
+- [[5] How to Request an EOS Space for Users][EOSSpaceRequest]
+
 
 # CERN CMS Computing Account
 > How to request a computing account for a new student.
@@ -800,7 +802,7 @@ voms-proxy-init --voms cms
 
 
 
-# How to Request an EOS Space for Users
+## How to Request an EOS Space for Users
 
 
 
@@ -822,3 +824,5 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCA
 [DataAnalysis]: https://github.com/asimsek/CMSStarterKit#cern-cms-data-analysis
 
 [HowtoRequestaGridCertificate]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#how-to-request-a-grid-certificate
+
+[EOSSpaceRequest]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#how-to-request-an-eos-space-for-users
