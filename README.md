@@ -804,7 +804,8 @@ voms-proxy-init --voms cms
 
 ## How to Request an EOS Space for Users
 
-> The CERN CMS T2 (EOS Space) is reserved for the CMS collaborators who are resident at CERN for more than 50% of their time for a period of at least a year. If you qualifiy for access to the the CERN CMS T2 you can gain access by submitting a GGUS ticket:
+> The CERN CMS T2 (EOS Space) is reserved for the CMS collaborators who are resident at CERN for more than 50% of their time for a period of at least a year. If you qualifiy for access to the the CERN CMS T2 you can gain access by submitting a GGUS ticket: 
+(Open this link through your browser where you defined/add your Grid certificate.)
 
 https://ggus.eu/?mode=ticket_cms
 
