@@ -1,7 +1,7 @@
 # Index
 
 - [[1] How To Apply For a CMS Computing Account][CMSComputingAcc]
-- [[2] How to connect to your lxplus area][ConnectLxplus]
+- [[2] How to Connect To Your Lxplus Area][ConnectLxplus]
 - [[3] CMS Data Analysis][DataAnalysis]
 - [[4] How to Request a Grid Certificate][HowtoRequestaGridCertificate]
 - [[5] How to Request an EOS Space for Users][EOSSpaceRequest]
