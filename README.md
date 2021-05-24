@@ -796,7 +796,7 @@ voms-proxy-init --voms cms
 
 > You should see a message as below indicating the VOMS connection is succesfull.
 
-> ps: Unless you complete the 2-step VO registration process, this code will not open a proxy and will give you an error.
+> ps: Unless you complete the 2-step VO registration process, this command line will not open a proxy and will give you an error.
 
 ![GridCertificateSuccesfull](https://raw.githubusercontent.com/asimsek/CMSStarterKit/main/GridCert5.png "GridCertificateSuccesfull")
 
