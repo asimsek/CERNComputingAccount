@@ -692,6 +692,103 @@ display FileName.png
 
 > ps. display shows both png and pdf. You can also use `evince` command for only pdfs. The usage is same, just replace `display` with `evince`.
 
+
+**So far, we have only accessed the data in the "HBHE Reco" collection. In order to access different collections, we first need to dump our root file with the edmDumpEventContent command.**
+
+> Let's use one of our root file "023F1B34-4E2E-A343-8E2C-09C411E86530.root" with the edmDumpEventContent command. Note that we add "> Run2018E_Collections.txt" at the end to write all output to a txt file.
+
+```bash
+edmDumpEventContent /eos/cms/store/user/asimsek/Run2018E/023F1B34-4E2E-A343-8E2C-09C411E86530.root > Run2018E_Collections.txt
+```
+
+> This command will list you all module names to a txt file. We can open the txt file with vi editor:
+
+```bash
+vi Run2018E_Collections.txt
+```
+
+
+You will now see a list like the one below:
+
+
+```bash
+Type                                  Module                      Label             Process
+----------------------------------------------------------------------------------------------
+GlobalObjectMapRecord                 "hltGtStage2ObjectMap"      ""                "HLT"
+edm::TriggerResults                   "TriggerResults"            ""                "HLT"
+trigger::TriggerEvent                 "hltTriggerSummaryAOD"      ""                "HLT"
+FEDRawDataCollection                  "rawDataCollector"          ""                "LHC"
+BXVector<GlobalAlgBlk>                "gtStage2Digis"             ""                "RECO"
+BXVector<GlobalExtBlk>                "gtStage2Digis"             ""                "RECO"
+BXVector<l1t::CaloTower>              "caloStage2Digis"           "CaloTower"       "RECO"
+BXVector<l1t::EGamma>                 "caloStage2Digis"           "EGamma"          "RECO"
+BXVector<l1t::EGamma>                 "gtStage2Digis"             "EGamma"          "RECO"
+.
+.
+.
+.
+edm::SortedCollection<EcalRecHit,edm::StrictWeakOrdering<EcalRecHit> >    "ecalRecHit"                "EcalRecHitsEB"   "RECO"
+edm::SortedCollection<EcalRecHit,edm::StrictWeakOrdering<EcalRecHit> >    "ecalRecHit"                "EcalRecHitsEE"   "RECO"
+.
+.
+.
+edm::SortedCollection<HBHERecHit,edm::StrictWeakOrdering<HBHERecHit> >    "hbheprereco"               ""                "RECO"
+edm::SortedCollection<HBHERecHit,edm::StrictWeakOrdering<HBHERecHit> >    "hbhereco"                  ""                "RECO"
+edm::SortedCollection<HBHERecHit,edm::StrictWeakOrdering<HBHERecHit> >    "reducedHcalRecHits"        "hbhereco"        "RECO"
+edm::SortedCollection<HFPreRecHit,edm::StrictWeakOrdering<HFPreRecHit> >    "hfprereco"                 ""                "RECO"
+edm::SortedCollection<HFRecHit,edm::StrictWeakOrdering<HFRecHit> >    "hfreco"                    ""                "RECO"
+edm::SortedCollection<HFRecHit,edm::StrictWeakOrdering<HFRecHit> >    "reducedHcalRecHits"        "hfreco"          "RECO"
+edm::SortedCollection<HORecHit,edm::StrictWeakOrdering<HORecHit> >    "horeco"                    ""                "RECO"
+edm::SortedCollection<HORecHit,edm::StrictWeakOrdering<HORecHit> >    "reducedHcalRecHits"        "horeco"          "RECO"
+edm::SortedCollection<ZDCDataFrame,edm::StrictWeakOrdering<ZDCDataFrame> >    "castorDigis"               ""                "RECO"
+edm::SortedCollection<ZDCDataFrame,edm::StrictWeakOrdering<ZDCDataFrame> >    "hcalDigis"                 ""                "RECO"
+edm::SortedCollection<ZDCRecHit,edm::StrictWeakOrdering<ZDCRecHit> >    "zdcreco"                   ""                "RECO"
+.
+.
+.
+.
+vector<reco::CaloJet>                 "ak4CaloJets"               ""                "RECO"
+vector<reco::CaloMET>                 "caloMet"                   ""                "RECO"
+.
+.
+vector<reco::Muon>                    "muons"                     ""                "RECO"
+vector<reco::Muon>                    "muonsFromCosmics"          ""                "RECO"
+.
+.
+vector<reco::PFJet>                   "ak4PFJets"                 ""                "RECO"
+vector<reco::PFJet>                   "ak4PFJetsCHS"              ""                "RECO"
+.
+.
+
+```
+
+> The second column defines the module name. We'will use the module name as an input tag in our configuration file.
+> For "HB & HE" analysis: "hbhereco"
+> For "HF" analysis: "hfreco"
+> For "HO" analysis: "horeco"
+> For "calo-jets": ak4CaloJets
+> For "pf-jets": ak4PFJets
+> For "HCAL Noise" analysis: hcalnoise
+
+Here is a couple example for you to show how to implement collections to your configuration file.
+```python
+#Find
+process.demo = cms.EDAnalyzer('DemoAnalyzer',
+		HBHERecHitCollection = cms.InputTag("hbhereco"),
+		HBHEPreRecHitCollection = cms.untracked.InputTag("hbheprereco"),
+		HcalDigisCollection = cms.untracked.InputTag("hcalDigis")
+		HFRecHitCollection = cms.untracked.InputTag("hfreco"),
+		PFJetCollection  = cms.untracked.InputTag("ak4PFJets"),
+		CaloJetCollection = cms.untracked.InputTag("ak4CaloJets"),
+		CaloMETCollection  = cms.untracked.InputTag("caloMet"),
+		HORecHitCollection = cms.untracked.InputTag("horeco"),
+		VertexCollection = cms.untracked.InputTag("offlinePrimaryVertices"),
+		TriggerRecord = cms.untracked.InputTag("gtDigis"),
+		rbxnoise =cms.untracked.InputTag("hcalnoise"),
+)
+```
+
+
 ------------
 
 > **Congratulations!! From now, you can easily analyze the CMS data.**
