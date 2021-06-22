@@ -875,7 +875,7 @@ if (hfhits_.isValid()) {
    histo1D["HERecHitEnergy"]->GetYaxis()->SetTitle("Number of Hits");
 
 #Add Underneath
-   histo1D["HFiEta"] = fs->make<TH1D>("HFiEta", "iEta vs Number Of Hits",60,-30,30);
+   histo1D["HFiEta"] = fs->make<TH1D>("HFiEta", "iEta vs Number Of Hits",90,-45,45);
    histo1D["HFiEta"]->GetXaxis()->SetTitle("i#eta");
    histo1D["HFiEta"]->GetYaxis()->SetTitle("Number of Hits");
 
