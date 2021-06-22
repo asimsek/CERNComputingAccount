@@ -763,11 +763,17 @@ vector<reco::PFJet>                   "ak4PFJetsCHS"              ""            
 ```
 
 > The second column defines the module name. We'will use the module name as an input tag in our configuration file.
+
 > For "HB & HE" analysis: "hbhereco"
+
 > For "HF" analysis: "hfreco"
+
 > For "HO" analysis: "horeco"
+
 > For "calo-jets": ak4CaloJets
+
 > For "pf-jets": ak4PFJets
+
 > For "HCAL Noise" analysis: hcalnoise
 
 Here is a couple example for you to show how to implement collections to your configuration file.
