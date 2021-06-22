@@ -324,8 +324,8 @@ hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>
 **Get the data from root file by token:**
 ```cpp
 #find
-   Handle<HBHERecHitCollection> hbhehits_;
-   iEvent.getByToken(hbherechit_, hbhehits_);
+   Handle<TrackCollection> tracks;
+   iEvent.getByToken(tracksToken_, tracks);
 
 #replace
    Handle<HBHERecHitCollection> hbhehits_;
