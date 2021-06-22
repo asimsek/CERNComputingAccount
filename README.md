@@ -866,7 +866,33 @@ if (hfhits_.isValid()) {
 
 ```
 
-Now we also need to define the collection (module name) to our config file:
+**Now initialize the histograms in `beginJob()`class.**
+
+```cpp
+#Find
+   histo1D["HERecHitEnergy"] = fs->make<TH1D>( "HERecHitEnergy", "HE: Energy Distibution",300,0,300);
+   histo1D["HERecHitEnergy"]->GetXaxis()->SetTitle("GeV");
+   histo1D["HERecHitEnergy"]->GetYaxis()->SetTitle("Number of Hits");
+
+#Add Underneath
+   histo1D["HFiEta"] = fs->make<TH1D>("HFiEta", "iEta vs Number Of Hits",60,-30,30);
+   histo1D["HFiEta"]->GetXaxis()->SetTitle("i#eta");
+   histo1D["HFiEta"]->GetYaxis()->SetTitle("Number of Hits");
+
+   histo1D["HFRecHitEnergy"] = fs->make<TH1D>( "HFRecHitEnergy", "HF: Energy Distibution",300,0,300);
+   histo1D["HFRecHitEnergy"]->GetXaxis()->SetTitle("GeV");
+   histo1D["HFRecHitEnergy"]->GetYaxis()->SetTitle("Number of Hits");
+```
+
+**After saving the `DemoAnalyzer.cc` file with `:wq` , we run the following command to compile our script.**
+> You should note that after every change in the `DemoAnalyzer.cc` file, you must compile it with scram.
+
+```bash
+scram b -j 8
+```
+
+
+**Now we also need to define the collection (module name) to our config file:**
 ```bash
 vi python/ConfFile_cfg.py
 ```
