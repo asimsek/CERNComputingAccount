@@ -848,7 +848,7 @@ iEvent.getByToken(hfrechit_, hfhits_);
 const HBHERecHitCollection* hbhe_hits = hbhehits_.failedToGet () ? 0 : &*hbhehits_;
 
 #Add Overneath
-const HBHERecHitCollection* hf_hits = hfhits_.failedToGet () ? 0 : &*hfhits_;
+const HFRecHitCollection* hf_hits = hfhits_.failedToGet () ? 0 : &*hfhits_;
 if (hfhits_.isValid()) {
 	for (HFRecHitCollection::const_iterator j=hf_hits->begin(); j!=hf_hits->end(); j++) {
 		HcalDetId id = (*j).id();
