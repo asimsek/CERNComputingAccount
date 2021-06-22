@@ -803,7 +803,7 @@ process.demo = cms.EDAnalyzer('DemoAnalyzer',
 
 After adding the collections to your configuration file, don't forget to call it in your `DemoAnalyzer.cc` script under the plugin folder.
 
-**For Example: Let's add `hfreco` collection to our DemoAnalyzer.cc script.**
+**Let's add `hfreco` collection to our DemoAnalyzer.cc script as an example:**
 
 ```bash
 vi plugin/DemoAnalyzer.cc
