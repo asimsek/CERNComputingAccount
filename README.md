@@ -693,6 +693,7 @@ display FileName.png
 > ps. display shows both png and pdf. You can also use `evince` command for only pdfs. The usage is same, just replace `display` with `evince`.
 
 
+### Finding Collections
 **So far, we have only accessed the data in the `HBHE Reco` collection. In order to access different collections, we first need to dump our root file with the `edmDumpEventContent` command.**
 
 > Let's use one of our root file `023F1B34-4E2E-A343-8E2C-09C411E86530.root` with the `edmDumpEventContent` command. Note that we add `> Run2018E_Collections.txt` at the end to write all output to a txt file.
