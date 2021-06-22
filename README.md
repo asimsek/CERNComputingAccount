@@ -781,8 +781,7 @@ The second column defines the module name. We'will use the module name as an inp
 Here is a couple example for you to show how to implement collections to your configuration file.
 
 ```bash
-cd python
-vi ConfFile_cfg.py
+vi python/ConfFile_cfg.py
 ```
 
 
@@ -802,11 +801,72 @@ process.demo = cms.EDAnalyzer('DemoAnalyzer',
 )
 ```
 
-After adding the collections to your configuration file, don't forget to call it in the handle section of your `DemoAnalyzer.cc` script under the plugin.
+After adding the collections to your configuration file, don't forget to call it in your `DemoAnalyzer.cc` script under the plugin folder.
+
+**For Example: Let's add `hfreco` collection to our DemoAnalyzer.cc script.**
 
 ```bash
-vi DemoAnalyzer.cc
+vi plugin/DemoAnalyzer.cc
 ```
+
+
+```cpp
+#Find
+//edm::EDGetTokenT<TrackCollection> tracksToken_;  //used to select what tracks to read from configuration file
+EDGetTokenT<HBHERecHitCollection> hbherechit_;
+
+#Add Underneath
+EDGetTokenT<HFRecHitCollection> hfrechit_;
+```
+
+
+```cpp
+#Find
+//now do what ever initialization is needed
+hbherechit_ = consumes<HBHERecHitCollection>(iConfig.getParameter<edm::InputTag>("HBHERecHitCollection"));
+
+#Add Underneath
+hfrechit_ = consumes<HFRecHitCollection>(iConfig.getParameter<edm::InputTag>("HFRecHitCollection"));
+```
+
+
+```cpp
+#Find
+Handle<HBHERecHitCollection> hbhehits_;
+iEvent.getByToken(hbherechit_, hbhehits_);
+
+#Add Underneath
+Handle<HFRecHitCollection> hfhits_;
+iEvent.getByToken(hfrechit_, hfhits_);
+```
+
+
+**Now we can reach to the HF collection by creating a hit loop as we did for the HBHE collection.**
+
+```cpp
+#Find
+const HBHERecHitCollection* hbhe_hits = hbhehits_.failedToGet () ? 0 : &*hbhehits_;
+
+#Add Overneath
+const HBHERecHitCollection* hf_hits = hfhits_.failedToGet () ? 0 : &*hfhits_;
+if (hfhits_.isValid()) {
+	for (HFRecHitCollection::const_iterator j=hf_hits->begin(); j!=hf_hits->end(); j++) {
+		HcalDetId id = (*j).id();
+		int ieta= id.ieta();
+		int iphi= id.iphi();
+		int depth = id.depth();
+		float energy = id.energy();
+		float time = id.time();
+		int auxwd = id.aux();
+		
+		histo1D["HFiEta"]->Fill(ieta);
+		histo1D["HFRecHitEnergy"]->Fill(energy);
+	}
+}
+
+```
+
+
 
 ------------
 
