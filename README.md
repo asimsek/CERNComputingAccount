@@ -3,6 +3,7 @@
 - [[1] How To Apply For a CMS Computing Account][CMSComputingAcc]
 - [[2] How to Connect To Your Lxplus Area][ConnectLxplus]
 - [[3] CMS Data Analysis][DataAnalysis]
+	- [[3-1] Finding Collections][FindingCollections]
 - [[4] How to Request a Grid Certificate][HowtoRequestaGridCertificate]
 - [[5] How to Request an EOS Space for Users][EOSSpaceRequest]
 
@@ -954,3 +955,5 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule?LOCA
 [HowtoRequestaGridCertificate]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#how-to-request-a-grid-certificate
 
 [EOSSpaceRequest]: https://github.com/asimsek/CMSStarterKit/blob/main/README.md#how-to-request-an-eos-space-for-users
+
+[FindingCollections]: https://github.com/asimsek/CMSStarterKit#finding-collections
