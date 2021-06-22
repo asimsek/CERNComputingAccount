@@ -866,7 +866,25 @@ if (hfhits_.isValid()) {
 
 ```
 
+Now we also need to define the collection (module name) to our config file:
+```bash
+vi python/ConfFile_cfg.py
+```
 
+```python
+#Find
+HBHERecHitCollection = cms.InputTag("hbhereco"),
+
+#Add Underneath
+HFRecHitCollection = cms.untracked.InputTag("hfreco"),
+```
+
+Now, Let's run and see the results as we did before with the `root -l Results2018.root`command and using `TBrowser b`.
+
+
+```bash
+cmsRun python/ConfFile_cfg.py
+```
 
 ------------
 
