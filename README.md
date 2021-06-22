@@ -876,7 +876,7 @@ vi python/ConfFile_cfg.py
 HBHERecHitCollection = cms.InputTag("hbhereco"),
 
 #Add Underneath
-HFRecHitCollection = cms.untracked.InputTag("hfreco"),
+HFRecHitCollection = cms.InputTag("hfreco"),
 ```
 
 Now, Let's run and see the results as we did before with the `root -l Results2018.root`command and using `TBrowser b`.
