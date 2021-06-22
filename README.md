@@ -855,9 +855,9 @@ if (hfhits_.isValid()) {
 		int ieta= id.ieta();
 		int iphi= id.iphi();
 		int depth = id.depth();
-		float energy = id.energy();
-		float time = id.time();
-		int auxwd = id.aux();
+		float energy = (*j).energy();
+		float time = (*j).time();
+		int auxwd = (*j).aux();
 		
 		histo1D["HFiEta"]->Fill(ieta);
 		histo1D["HFRecHitEnergy"]->Fill(energy);
