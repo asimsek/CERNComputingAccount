@@ -693,9 +693,9 @@ display FileName.png
 > ps. display shows both png and pdf. You can also use `evince` command for only pdfs. The usage is same, just replace `display` with `evince`.
 
 
-**So far, we have only accessed the data in the "HBHE Reco" collection. In order to access different collections, we first need to dump our root file with the edmDumpEventContent command.**
+**So far, we have only accessed the data in the `HBHE Reco` collection. In order to access different collections, we first need to dump our root file with the `edmDumpEventContent` command.**
 
-> Let's use one of our root file "023F1B34-4E2E-A343-8E2C-09C411E86530.root" with the edmDumpEventContent command. Note that we add "> Run2018E_Collections.txt" at the end to write all output to a txt file.
+> Let's use one of our root file `023F1B34-4E2E-A343-8E2C-09C411E86530.root` with the `edmDumpEventContent` command. Note that we add `> Run2018E_Collections.txt` at the end to write all output to a txt file.
 
 ```bash
 edmDumpEventContent /eos/cms/store/user/asimsek/Run2018E/023F1B34-4E2E-A343-8E2C-09C411E86530.root > Run2018E_Collections.txt
@@ -762,23 +762,29 @@ vector<reco::PFJet>                   "ak4PFJetsCHS"              ""            
 
 ```
 
-> The second column defines the module name. We'will use the module name as an input tag in our configuration file.
+The second column defines the module name. We'will use the module name as an input tag in our configuration file.
 
-> For "HB & HE" analysis: "hbhereco"
+> For "HB & HE" analysis: `hbhereco`
 
-> For "HF" analysis: "hfreco"
+> For "HF" analysis: `hfreco`
 
-> For "HO" analysis: "horeco"
+> For "HO" analysis: `horeco`
 
-> For "calo-jets": ak4CaloJets
+> For "calo-jets": `ak4CaloJets`
 
-> For "pf-jets": ak4PFJets
+> For "pf-jets": `ak4PFJets`
 
-> For "HCAL Noise" analysis: hcalnoise
+> For "HCAL Noise" analysis: `hcalnoise`
 
 Here is a couple example for you to show how to implement collections to your configuration file.
+
+```bash
+cd python
+vi ConfFile_cfg.py
+```
+
+
 ```python
-#Find
 process.demo = cms.EDAnalyzer('DemoAnalyzer',
 		HBHERecHitCollection = cms.InputTag("hbhereco"),
 		HBHEPreRecHitCollection = cms.untracked.InputTag("hbheprereco"),
@@ -794,6 +800,11 @@ process.demo = cms.EDAnalyzer('DemoAnalyzer',
 )
 ```
 
+After adding the collections to your configuration file, don't forget to call it in the handle section of your `DemoAnalyzer.cc` script under the plugin.
+
+```bash
+vi DemoAnalyzer.cc
+```
 
 ------------
 
