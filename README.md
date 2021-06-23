@@ -905,7 +905,7 @@ HBHERecHitCollection = cms.InputTag("hbhereco"),
 HFRecHitCollection = cms.InputTag("hfreco"),
 ```
 
-Now, Let's run and see the results as we did before with the `root -l Results2018.root`command and using `TBrowser b`.
+Now, Let's run with the following command line and see the results as we did before with the `root -l Results2018.root`command and using `TBrowser b`.
 
 
 ```bash
