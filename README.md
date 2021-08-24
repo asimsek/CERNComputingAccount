@@ -664,6 +664,8 @@ cmsRun python/ConfFile_cfg.py
 
 **Now you can check your results:**
 
+ps: Please make sure Xming app is open on your computer before using the following commands.
+
 ```bash
 root -l Results2018.root
 ```
