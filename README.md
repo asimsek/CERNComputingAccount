@@ -202,7 +202,7 @@ echo $0
 # for Bash User
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
-# for csh user
+# for csh/tcsh user
 source /cvmfs/cms.cern.ch/cmsset_default.csh
 ```
 
