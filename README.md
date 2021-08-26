@@ -678,7 +678,7 @@ This will activate the root with your result file.
 TBrowser b
 ```
 
-> ps: Argument b is an arbitrary argument and you can change it if the b does not work.
+> ps: Argument b is an arbitrary argument and you can change it if the b does not work. (ie. TBrowser c)
 
 **This command line will open a new browser window:**
 
