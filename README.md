@@ -233,7 +233,7 @@ echo $0
 # for Bash User
 export SCRAM_ARCH=slc7_amd64_gcc700
 
-# for csh user
+# for csh/tcsh user
 setenv SCRAM_ARCH slc7_amd64_gcc700
 ```
 
