@@ -196,7 +196,7 @@ echo $0
 ```
 
 `echo $0`command will show your shell type. Use one of the following command lines appropriate for your shell type.
-
+> ps: You need to `source` the following script (`cmsset_default.***`) to be able to use the `cmsenv` command every time you make a new connection to Lxplus.
 
 ```bash
 # for Bash User
@@ -205,6 +205,7 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 # for csh user
 source /cvmfs/cms.cern.ch/cmsset_default.csh
 ```
+
 
 Create a new CMSSW version.
 ```bash
