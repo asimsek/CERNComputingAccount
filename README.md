@@ -169,7 +169,7 @@ This will open a terminal window and use your new cern account password. (you'll
 - **cd** -- without arguments, will let you to go home directory.
 - **cd ..** -- this command will get you one level up from your current position.
 - **pwd** -- tells you where you currently are.
-- **vi filename.xxx** -- vi is a text editor for your scripts. when you open the editor you can activate insert mode with pressing **i** on your keyboard and you can press **esc** to deactivate. You can see the current mode on left-bottom side. To save the file you can press **esc** first, they type **:w** and hit to **enter**. To quit from vi editor press **esc** first, type **:q** and hit **enter**. If you want to quit without saving your changes, press **esc** first, type **:q!** and hit **enter**. If you would like to save & exit, press **esc** first, type **:wq** hit **enter**.
+- **vi filename.xxx** -- vi is a text editor for your scripts. when you open the editor you can activate insert mode with pressing **i** on your keyboard and you can press **esc** to deactivate. You can see the current mode on left-bottom side. To save the file you can press **esc** first, they type **:w** and hit to **enter**. To quit from vi editor press **esc** first, type **:q** and hit **enter**. If you want to quit without saving your changes, press **esc** first, type **:q!** and hit **enter**. If you would like to save & exit, press **esc** first, type **:wq** hit **enter**. ps: If you are working on Windows, you should use the arrow keys on your keyboard to navigate the document instead of mouse scrolling.
 
 
 For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
