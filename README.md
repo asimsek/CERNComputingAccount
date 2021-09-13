@@ -169,7 +169,10 @@ This will open a terminal window and use your new cern account password. (you'll
 - **cd** -- without arguments, will let you to go home directory.
 - **cd ..** -- this command will get you one level up from your current position.
 - **pwd** -- tells you where you currently are.
-- **vi filename.xxx** -- vi is a text editor for your scripts. when you open the editor you can activate insert mode with pressing **i** on your keyboard and you can press **esc** to deactivate. You can see the current mode on left-bottom side. To save the file you can press **esc** first, they type **:w** and hit to **enter**. To quit from vi editor press **esc** first, type **:q** and hit **enter**. If you want to quit without saving your changes, press **esc** first, type **:q!** and hit **enter**. If you would like to save & exit, press **esc** first, type **:wq** hit **enter**. ps: If you are working on Windows, you should use the arrow keys on your keyboard to navigate the document instead of mouse scrolling.
+- **vi filename.xxx** -- vi is a text editor for your scripts. when you open the editor you can activate insert mode with pressing **i** on your keyboard and you can press **esc** to deactivate. You can see the current mode on left-bottom side. To save the file you can press **esc** first, they type **:w** and hit to **enter**. To quit from vi editor press **esc** first, type **:q** and hit **enter**. If you want to quit without saving your changes, press **esc** first, type **:q!** and hit **enter**. If you would like to save & exit, press **esc** first, type **:wq** hit **enter**. 
+
+
+> ps: If you are working on Windows (Putty Terminal), you should use the arrow keys (up, down, left, right) on your keyboard instead of mouse scrolling to navigate on the document that you opened with the vi editor. Also, the text or code block selected in the Putty terminal (Windows) will be copied to the clipboard and you can paste an item you copied with a right mouse click.
 
 
 For more: http://mally.stanford.edu/~sr/computing/basic-unix.html
