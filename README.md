@@ -702,9 +702,13 @@ display FileName.png
 ### Finding Collections
 **So far, we have only accessed the data in the `HBHE Reco` collection. In order to access different collections, we first need to dump our root file with the `edmDumpEventContent` command.**
 
+> ps: **cmsenv** command is crutial for usage of all cms functions. Don't forget to use it before using the cms commands ( root, cmsRun, edmProvDump, edmDumpEventContent, etc. )
+
 > Let's use one of our root file `023F1B34-4E2E-A343-8E2C-09C411E86530.root` with the `edmDumpEventContent` command. Note that we add `> Run2018E_Collections.txt` at the end to write all output to a txt file.
 
 ```bash
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+cmsenv
 edmDumpEventContent /eos/cms/store/user/asimsek/Run2018E/023F1B34-4E2E-A343-8E2C-09C411E86530.root > Run2018E_Collections.txt
 ```
 
