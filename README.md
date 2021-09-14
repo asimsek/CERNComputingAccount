@@ -801,6 +801,12 @@ vi python/ConfFile_cfg.py
 
 
 ```python
+## Find
+process.demo = cms.EDAnalyzer('DemoAnalyzer',
+        HBHERecHitCollection = cms.InputTag("hbhereco"),
+)
+
+## Replace
 process.demo = cms.EDAnalyzer('DemoAnalyzer',
 		HBHERecHitCollection = cms.InputTag("hbhereco"),
 		HBHEPreRecHitCollection = cms.untracked.InputTag("hbheprereco"),
