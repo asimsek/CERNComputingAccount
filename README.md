@@ -1063,6 +1063,7 @@ Please fill the form as shown below:
 
 For more information:
 https://twiki.cern.ch/twiki/bin/viewauth/CMS/T2CHCERN#Right_of_access_to_CERN_CMS_T2
+http://cp3.irmp.ucl.ac.be/downloads/RootTreeDescription.html
 
 ------------
 
