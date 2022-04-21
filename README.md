@@ -311,7 +311,7 @@ EDGetTokenT<HBHERecHitCollection> hbherechit_;
 
 **Delete unnecessary part:**
 ```cpp
-#find & Delete (with : sign)
+#find & Delete (with :)
 :
 tracksToken_(consumes<TrackCollection>(iConfig.getUntrackedParameter<edm::InputTag>("tracks")))
 ```
